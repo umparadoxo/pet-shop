@@ -4,16 +4,16 @@ import { useParams, useHistory } from 'react-router-dom'
 import { busca } from '../api/api'
 
 const Post = () => {
+    let history = useHistory()
     const { id } = useParams()
     const [post, setPost] = useState({})
-    
+
     useEffect(() => {
-        let history = useHistory()
         busca(`/posts/${id}`, setPost)
             .catch(() => {
                 history.push('/404')
             })
-    }, [id])
+    }, [id, history])
 
     return (
         <main className='container flex flex--centro'>
