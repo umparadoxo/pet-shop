@@ -8,6 +8,9 @@ import Cabecalho from './components/Cabecalho'
 import Post from './paginas/Post'
 import Categoria from './paginas/Categorias'
 
+//comando pra iniciar o servidor da api: npx json-server --watch db.json --port 5000
+
+
 function App() {
 
   return (
